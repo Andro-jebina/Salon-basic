@@ -1,0 +1,136 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5e6d3 0%, #ffe4e1 100%),
+    url('https://images.unsplash.com/photo-1560066620-b8b73ea28550?w=1200&fit=crop')
+      center/cover no-repeat;
+  background-blend-mode: overlay;
+  margin-top: 60px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 228, 225, 0.85) 0%, rgba(245, 230, 211, 0.85) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #333;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #c9405e;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeInDown 1s ease-out 0.2s both;
+}
+
+.hero-tagline {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #8b5a63;
+  font-weight: 300;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #c9405e 0%, #a83055 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(201, 64, 94, 0.3);
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.hero-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(201, 64, 94, 0.4);
+  color: white;
+}
+
+.hero-btn i {
+  margin-right: 0.5rem;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: 80vh;
+    margin-top: 50px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.3rem;
+  }
+
+  .hero-btn {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 70vh;
+    margin-top: 50px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.1rem;
+  }
+
+  .hero-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
